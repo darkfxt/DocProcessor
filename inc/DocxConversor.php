@@ -46,7 +46,7 @@ class DocxConversion{
 
         zip_close($zip);
 
-        $content = str_replace('</w:r></w:p></w:tc><w:tc>', " ", $content);
+        $content = str_replace('</w:r></w:p></w:tc><w:tc>', "|", $content);
         $content = str_replace('</w:r></w:p>', "\r\n", $content);
         $striped_content = strip_tags($content);
 
